@@ -1,0 +1,15 @@
+.env
+.env.*
+.git
+.gitignore
+.agents
+.specify
+specs
+docs
+desafio-tecnico
+AGENTS.md
+CLAUDE.md
+node_modules
+dist
+coverage
+*.log
