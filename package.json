@@ -1,0 +1,29 @@
+{
+  "name": "sku-batch-integration",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "start:api": "node dist/api/server.js",
+    "start:worker": "node dist/worker/workerProcess.js",
+    "register": "node dist/cli/registerAndBurst.js register",
+    "burst": "node dist/cli/registerAndBurst.js burst",
+    "reprocess-failure": "node dist/cli/registerAndBurst.js reprocess-failure",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.1",
+    "typescript": "6.0.3",
+    "vitest": "4.1.11"
+  },
+  "dependencies": {
+    "bullmq": "^5.81.5",
+    "fastify": "^5.12.5",
+    "ioredis": "^5.11.1"
+  }
+}
